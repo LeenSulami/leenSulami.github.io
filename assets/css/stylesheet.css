@@ -182,3 +182,7 @@ body {
 .project__image {
   box-shadow: 0 4px 4px rgba(253, 253, 253, 0.219) !important;
 }
+
+.project__card_level2 {
+  height: 500px !important;
+}
