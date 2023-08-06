@@ -1,12 +1,218 @@
-$(document).ready(function () {
-  $(window).scroll(function () {
-    $(".content-based-scroll").each(function () {
-      var position = $(this).offset().top;
-      var scroll = $(window).scrollTop();
-      var windowHeight = $(window).height();
-      if (scroll > position - windowHeight + 200) {
-        $(this).addClass("show");
-      }
-    });
-  });
-});
+/* Main Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+/* body */
+body {
+  padding: 10rem 0 0 0;
+  background-image: radial-gradient(#000000, #100f10, #1b191a, #242224);
+}
+.content-based-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.content-based-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Navbar */
+.navbar-toggler {
+  border: none !important;
+}
+.navbar-toggler:hover {
+  border: none !important;
+}
+.navbar-toggler:active {
+  border: none !important;
+}
+.home__social-follow {
+  margin-right: 3rem;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: x-large;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  color: #00b49c !important;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-link::after {
+  color: #00b49c;
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #00b49c;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  color: #00b49c !important;
+}
+.navbar {
+  background-image: radial-gradient(
+    #000000,
+    #100f10,
+    #1b191a,
+    #242224,
+    #2d2b2e
+  );
+  border-bottom: 5px solid #00b49c1f;
+}
+/* Home */
+
+.home__container {
+  position: relative;
+  height: 100%;
+  align-items: center;
+  color: #fff;
+}
+
+.home__social {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+}
+
+.home__social-follow {
+  font-weight: lighter;
+  position: relative;
+}
+
+.home__social-follow::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 2px;
+  background-color: #00b49c;
+  right: -45%;
+  top: 50%;
+}
+
+.home__social-links {
+  display: inline-flex;
+  column-gap: 1.08rem;
+  transition: 0.4s;
+}
+.home__social-link {
+  font-size: 1.8rem;
+  color: #fff;
+  text-decoration: none;
+}
+.home__social-link:hover {
+  transform: translateY(0.25rem);
+  color: #fff;
+}
+
+.box {
+  box-shadow: 0px 10px 20px 5px rgba(70, 70, 70, 0.5);
+  transform: translateY(-1px);
+  border-radius: 88% 12% 79% 21% / 19% 81% 19% 81% !important;
+  transition: transform 0.25s ease-out;
+  opacity: 0.4;
+}
+
+.btn {
+  background-color: #00b49c !important;
+}
+
+.info__title,
+.info__subtitle {
+  font-size: small;
+}
+
+.info__title {
+  font-size: medium;
+}
+.info__icon {
+  font-size: 2rem;
+  color: #00b49c;
+}
+
+/* About me */
+.section_title::before {
+  content: attr(data-heading);
+  display: block;
+  color: #00b49c;
+  font-size: 1.5rem;
+}
+.about__box {
+  text-align: center;
+  border: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: #2d2b2ea1;
+  border-radius: 0.25rem;
+}
+
+.about__icon {
+  font-size: 1.8rem;
+  color: #00b49c;
+}
+
+.about__subtitile {
+  font-size: medium;
+}
+
+.about__description {
+  font-size: small;
+}
+
+/* Projects */
+.project__tech-stack {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project__image {
+  box-shadow: 0 4px 4px rgba(253, 253, 253, 0.219) !important;
+}
+
+.project__card_level2 {
+  height: 410px !important;
+}
+/* footer */
+footer {
+  background-color: #313030;
+  padding: 20px;
+  text-align: center;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.success-quote {
+  margin-bottom: 20px;
+}
+
+h3 {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+blockquote {
+  font-size: 18px;
+  font-style: italic;
+  color: #666;
+  margin: 0;
+  padding: 10px;
+  border-left: 4px solid rgb(255, 255, 255);
+}
